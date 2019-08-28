@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import Todos from "./todo";
+
+class App extends React.Component {
+  state = {
+    todos_list : [
+      {id:1, content: "buy milk"},
+      {id:2, content: "drink milk"},
+      {id:3, content: "go out"},
+    ]
+  }
+  render(){
   return (
+    [<div className = "p-3 mb-2 bg-warning text-dark "><h1 className="text-center">To-Do List</h1></div>,
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      < Todos todos = {this.state.todos_list} />
+    </div>]
   );
+}
 }
 
 export default App;
