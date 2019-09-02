@@ -12,8 +12,8 @@ class Todo extends React.Component{
         else{
             todoList = todos.map(todos =>{
                 return (
-                    <div className="container">
-                    <div className ="container border border-dark rounded-pill mt-3 mb-2 p-3 bg-dark clearfix" key={todos.id}>
+                    <div className="container" key={todos.id}>
+                    <div className ="container border border-dark rounded-pill mt-3 mb-2 p-3 bg-dark clearfix" >
                     <p className="float-left text-white font-weight-bold">Task: { todos.content } </p>
                     <button className = "float-right btn btn-outline-danger" onClick = {() => this.props.deleteTodo(todos.id)}>Delete</button>
                     </div>

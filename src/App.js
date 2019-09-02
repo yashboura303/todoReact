@@ -31,11 +31,11 @@ class App extends React.Component {
     }
   render(){
   return (
-    [<div className = "p-3 mb-2 bg-warning text-dark "><h1 className="text-center">To-Do List</h1></div>,
+    <div className = "p-3 mb-2 bg-warning text-dark "><h1 className="text-center">To-Do List</h1></div>,
     <div className="App">
       < Todos todos = {this.state.todos_list} deleteTodo = {this.deleteTodo} />
       < Form addTodo = {this.addTodo}/>
-    </div>]
+    </div>
   );
 }
 }
